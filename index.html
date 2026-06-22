@@ -58,3 +58,150 @@ section {
     padding: 15px;
     background: #e2f3e8;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-header:hover {
+    background: #cde7d6;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background: white;
+}
+
+/* BOUTONS */
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #c1121f;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #9b0d18;
+}
+
+/* MAP */
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo Chambre d'Agriculture Indre-et-Loire">
+    <h1>Devenir un maître d’apprentissage inspirant</h1>
+    <p>Accompagner efficacement vos apprentis et transmettre votre savoir-faire</p>
+</header>
+
+<!-- ✅ IMAGE CORRIGEE -->
+<section>
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200" 
+         alt="Formation accompagnement apprentissage" 
+         class="banner">
+</section>
+
+<section>
+    <h2>📅 Informations pratiques</h2>
+    <p><strong>Lieu :</strong> Chambre d'Agriculture d'Indre-et-Loire</p>
+    <p><strong>Adresse :</strong> 38 rue Augustin Fresnel, 37170 Chambray-lès-Tours</p>
+</section>
+
+<section>
+    <h2>📘 Programme détaillé</h2>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 1 – Comprendre son rôle</div>
+        <div class="accordion-content">Identifier les missions, analyser les attentes et ajuster sa posture de maître d’apprentissage.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 2 – Comprendre les jeunes</div>
+        <div class="accordion-content">Identifier motivations, profils et facteurs de démotivation des apprentis.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 3 – Communication</div>
+        <div class="accordion-content">Développer l'écoute active et instaurer un climat de confiance.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 4 – Transmission</div>
+        <div class="accordion-content">Structurer une démonstration et transmettre efficacement un savoir-faire.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 5 – Accueil et intégration</div>
+        <div class="accordion-content">Construire un parcours d’intégration progressif et sécurisant.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 6 – Suivi et évaluation</div>
+        <div class="accordion-content">Conduire des entretiens, valoriser les réussites et corriger les écarts.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 7 – Gérer les tensions</div>
+        <div class="accordion-content">Identifier les signaux faibles et remobiliser un apprenti.</div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-header">Séquence 8 – Inclusion et handicap</div>
+        <div class="accordion-content">Adapter l’accompagnement et favoriser un environnement inclusif.</div>
+    </div>
+
+</section>
+
+<section>
+    <h2>📥 Documents</h2>
+    <a href="programme.pdf"><button>Télécharger le programme</button></a>
+    <a href="livret-stagiaire.pdf"><button>Livret stagiaire</button></a>
+</section>
+
+<!-- ✅ GOOGLE MAPS CORRIGEE -->
+<section>
+    <h2>📍 Localisation</h2>
+    <iframe 
+        src="https://maps.google.com/maps?q=38%20rue%20Augustin%20Fresnel%2037170&z=15&output=embed">
+    </iframe>
+</section>
+
+<footer>
+    <p><strong>Contact formateur</strong></p>
+    <p>Sophie BIDET – Conseillère en accompagnement humain</p>
+    <p>📞 06 24 51 86 11</p>
+    <p>Politique d’inclusion et gestion du handicap</p>
+</footer>
+
+<script>
+document.querySelectorAll(".accordion-header").forEach(item => {
+    item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        content.style.display =
+            content.style.display === "block" ? "none" : "block";
+    });
+});
+</script>
+
+</body>
+</html>
